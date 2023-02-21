@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap')
+$main_font: 'Plus Jakarta Sans', sans-serif
+
+$white: hsl(0, 0%, 100%)
+$blue: hsl(219, 85%, 26%)
+$light_gray_blue: hsl(210, 60%, 98%)
+$dark_gray_blue: hsl(219, 12%, 42%)
+$dark_blue: hsl(224, 21%, 14%)
+
+$desktop: 500px
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: $main_font
+
+body
+    display: grid
+    place-content: center
+    background-color: $light_gray_blue
+
+.notifications
+    max-width: 635px
+    padding: 1rem
+    border-radius: 10px
+    background-color: $white
+    .notifications_head
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 1.5em    
+    .notification_holder
+        ul
+            list-style: none
+    @media screen and ( min-width: $desktop )
+        padding: 1.5rem
+
+.notification_count_holder
+    display: flex
+    h1
+        font-size: 1.2rem
+        color: $dark_blue
+    .notification_count
+        font-size: .8rem
+        margin-left: .5rem
+        background-color: $blue
+        color: $white
+        border-radius: 7px
+        width: 1.7rem
+        height: 1.5rem
+        display: grid
+        place-content: center
+
+.markRead
+    cursor: pointer
+    color: $dark_gray_blue
+    font-size: .8rem
